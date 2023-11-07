@@ -10,7 +10,11 @@ def get_script_directory():
 
 # Configure the logging settings
 log_file_path = os.path.join(get_script_directory(), 'output.log')
-print(f"Log file path: {log_file_path}")  # Debugging line
+
+# Check if the path is a directory before configuring logging
+if os.path.isdir(log_file_path):
+    raise ValueError(f"The provided log file path '{log_file_path}' is a directory.")
+
 logging.basicConfig(
     filename=log_file_path,
     level=logging.INFO,
