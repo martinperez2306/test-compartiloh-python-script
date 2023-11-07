@@ -11,4 +11,4 @@ COPY . .
 # RUN pip install -r requirements.txt
 
 # Set the entry point for the container
-CMD ["python", "script.py"]
+CMD ["python", "multiply.py"]
