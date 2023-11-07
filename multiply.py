@@ -1,17 +1,11 @@
-# script.py
-
 # multiply.py
 
 import logging
 import datetime
 import os
 
-# Function to get the absolute path of the script's directory
-def get_script_directory():
-    return os.path.dirname(os.path.abspath(__file__))
-
 # Configure the logging settings
-log_file_path = os.path.join(get_script_directory(), 'output.log')
+log_file_path = os.path.join(os.getcwd(), 'output.log')
 logging.basicConfig(
     filename=log_file_path,
     level=logging.INFO,
@@ -33,6 +27,3 @@ log_message(f"Result: {result}")
 
 # Additional log messages
 log_message("Script finished.")
-
-
-
