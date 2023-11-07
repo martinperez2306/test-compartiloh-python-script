@@ -14,7 +14,7 @@ def log_message(message):
     
     log_file_path = os.path.join(get_script_directory(), "output.log")
     
-    with open(log_file_path, "a") as log_file:
+    with open(log_file_path, "w") as log_file:
         log_file.write(log_entry)
 
 # Example usage
