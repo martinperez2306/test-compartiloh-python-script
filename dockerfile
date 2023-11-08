@@ -5,7 +5,6 @@ FROM python:3.9
 WORKDIR /app
 
 # Copy the entire contents of the current directory into the container
-COPY ["$(pwd)"/output.log .]
 COPY . .
 
 # Install dependencies (if you have a requirements.txt file)
