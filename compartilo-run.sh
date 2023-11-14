@@ -1,2 +1,2 @@
 #!/bin/bash
-python multiply.py
+python3 multiply.py
